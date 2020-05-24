@@ -1,0 +1,96 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{
+    Shendong Li
+    Calc 1
+}
+\rfoot{
+    Page \thepage
+}
+
+\begin{document}
+\title{(Verification) In Conclusion}
+\author{by Shengdong Li}
+\date{3 May 2020}
+\maketitle
+\section{Intro}
+Hey Kayra and Maggie! Thanks for replying to my initial post! After seeing your solutions, I finally understand how to approach this problem! Below, I'll try to do the problem once with Kayra's way, using $u=\sqrt{x}+1$, and also Maggie's way, using $u=\sqrt{x}$. In solving using both methods, I tried to go more in-depth into the steps and commentate. 
+\section{Using $u=\sqrt{x}+1$}
+\begin{equation}
+    \int_{ }^{ }\left(\frac{1}{\sqrt{x}-1}\right)dx
+\end{equation}
+I think that rewriting the problem made me think about the problem more clearly. Here, we change $\sqrt{x}$ into $x^{\frac{1}{2}}$, which helps with integration and derivation, and also moved the $dx$ into the equation, which made me treat it more as a variable instead of an opener and closer for integration.
+\begin{equation}
+    \int_{ }^{ }\frac{dx}{x^{\frac{1}{2}}-1}
+\end{equation}
+\begin{align}
+    \intertext{Here we move into $u$-sub. Obviously we're trying to force the denominator into a single variable...}
+    u&=x^{\frac{1}{2}}-1\\
+    du&=\frac{dx}{2x^{\frac{1}{2}}}\\
+    \intertext{And plug that back into the original integral}
+    \int_{ }^{ }\frac{dx}{x^{\frac{1}{2}}-1}&=\int_{ }^{ }\frac{dx}{u}
+    \intertext{Here is where I was previously stuck, because I thought that because there was no $\sqrt{x}$ at any other point in the equation, $u$-sub would be impossible. However, thanks to Kayra, I realized that I can actually treat $dx$ as a variable here, and rearrange $du$ and $dx$ }
+    2x^{\frac{1}{2}}du&=dx
+    \intertext{And now the integral looks like this:}
+    \int_{ }^{ }\frac{dx}{u}&=\int_{ }^{ }\frac{2x^{\frac{1}{2}}du}{u}
+    \intertext{Here we can factor out the $2$}
+    &=2\int_{ }^{ }\frac{x^{\frac{1}{2}}du}{u}
+    \intertext{This part also confused me, but I realized that you can $u$-sub again using the original value of $u$ defined earlier. $u$-subbing to the components of the $du$ value is really interesting!}
+    u&=x^{\frac{1}{2}}-1\\
+    u+1&=x^{\frac{1}{2}}\\
+    2\int_{ }^{ }\frac{x^{\frac{1}{2}}du}{u}&=2\int_{ }^{ }\frac{\left(u+1\right)du}{u}
+    \intertext{Now this is looking like a pretty standard form. Distribute the numerator...}
+    &=2\int_{ }^{ }\left(\frac{u}{u}+\frac{1}{u}\right)du
+    \intertext{The $u$s cancel...}
+    &=2\int_{ }^{ }\left(1+\frac{1}{u}\right)du
+    \intertext{Then integrate}
+    &=2\left(\left(x^{\frac{1}{2}}-1\right)+\ln\left(x^{\frac{1}{2}}-1\right)\right)
+    \intertext{Distribute the $2$}
+    &=2x^{\frac{1}{2}}-2+2\ln\left(x^{\frac{1}{2}}-1\right)
+    \intertext{And here the $2$ does get absorbed by the $+c$}
+    &=\boxed{2x^{\frac{1}{2}}+2\ln\left(x^{\frac{1}{2}}-1\right)+C}
+\end{align}
+\section{Using $u=\sqrt{x}$}
+For the following...
+\begin{equation}
+    \int_{ }^{ }\frac{dx}{x^{\frac{1}{2}}-1}
+\end{equation}
+\begin{align}
+    \intertext{First we $u$-sub}
+    u&=x^{\frac{1}{2}}\\
+    du&=\frac{dx}{2x^{\frac{1}{2}}}\\
+    &=\int_{ }^{ }\frac{dx}{u-1}
+    \intertext{Then we solve for $dx$ and plug that into the integral...}
+    2x^{\frac{1}{2}}du&=dx\\
+    &=\int_{ }^{ }\frac{2x^{\frac{1}{2}}du}{u-1}
+    \intertext{Factor out the $2$}
+    &=2\int_{ }^{ }\frac{x^{\frac{1}{2}}du}{u-1}
+    \intertext{Maggie's comment about how $u$ can be found in $du$ helped me realize that you can $u$-sub here again to continue on...}
+    &=2\int_{ }^{ }\left(\frac{u}{u-1}\right)du
+    \intertext{Here Maggie said that $u=u-1+1$, and was able to split the numerator of the fraction using this, which is a really smart way to do it! Another lazy way to do it is just to $v$-sub}
+    v&=u-1\\
+    v+1&=u\\
+    dv&=du\\
+    &=2\int_{ }^{ }\left(\frac{v+1}{v}\right)dv\\
+    &=2\int_{ }^{ }\left(\frac{v}{v}+\frac{1}{v}\right)dv\\
+    &=2\int_{ }^{ }\left(1+\frac{1}{v}\right)dv
+    \intertext{Integrate.}
+    &=2\left(v+\ln\left(v\right)\right)
+    \intertext{Put $v$ back in terms of $u$}
+    &=2\left(u-1+\ln\left(u-1\right)\right)
+    \intertext{Then $u$ back in terms of $x$}
+    &=2\left(x^{\frac{1}{2}}-1+\ln\left(x^{\frac{1}{2}}-1\right)\right)
+    \intertext{Then distribute the $2$}
+    &=2x^{\frac{1}{2}}-2+2\ln\left(x^{\frac{1}{2}}-1\right)
+    \intertext{Then the constant gets sucked up by the $+C$}
+    &=\boxed{2x^{\frac{1}{2}}+2\ln\left(x^{\frac{1}{2}}-1\right)+C}
+\end{align}
+\section{In Conclusion Conclusion}
+From doing this problem, I realized two things: one is the goal of $u$-subbing. When you $u$-sub, you try and replace the $x$ values, but from this problem I also realized the importance of trying to replace the $dx$ with the $du$ value. The second thing I learned is that you can recursively $u$-sub on the components of the $du$ value that you subbed in. Another side topic is that $u$ can be replaced with $u+1-1$, which can help avoid a $v$-sub in some situations. Thank you Kayra and Maggie for helping me realize this, I learned a lot!
+\end{document}

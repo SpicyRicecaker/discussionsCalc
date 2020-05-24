@@ -1,0 +1,99 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{tikz}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{
+    Shengdong Li
+    Calc 1
+    Notes
+}
+
+\rfoot{Page \thepage}
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+
+\begin{document}
+\title{Week 4/6 Notes}
+\author{by Shengdong Li}
+\date{6 April 2020}
+\maketitle
+
+\section{Finding Volume: Fixed base with Cross-Sections}
+\begin{enumerate}
+    \item Volume problems, with flat base, set of geometric cross-sections
+    \item 3D shapes where you need to determine the cross section
+\end{enumerate}
+
+\section{Volume Problems}
+You have a flat base with changing height, base on the shape in question or information given \par
+For example, consider the post-it problem. The cross section = $s\cdot s=s^2=$ area of postit. Let $a(x)$ = area of the $2d$ cross section. The $volume$ of the $3d$ solid would thus be $\int_{a}^{b} A(x)\:dx$. $[a,b]$ is the $x$ interval that forms the structural base. $a(x)$ is just $s^2, \pi r^2$, etc, but must be in terms of $x$. This can be $dy$ or $dx$ \paragraph{own solutions}
+Ok, so if $a(x)$ is the area of the $2d$ shape / cross section, and the $3d$ volume is just the integral of that, then the only hard part is putting the side lengths or radius in terms of $x$, in which the base of the shape is bound by. \paragraph{green}
+Semicircle equation = $\frac{\pi r^2}{2}$.
+And $r = x^2$.Therefore, $A(x)=\frac{\pi (x^2)^2}{2}$. $a=0, b=1$, in terms of $dx$. Integral equation = $\int_{0}^{1}\frac{\pi x^4}{2}\:dx$=$\frac{\pi}{2}\int_{0}^{1}x^4\:dx$=$\frac{\pi}{2}\cdot\frac{x^5}{5}\big|_{0}^{1}$=$\frac{1}{5}\cdot\frac{\pi}{2}$=$\frac{\pi}{10}$ \paragraph{green correction}
+$r= \frac{x^2}{2}$. Therefore, $A(x)=\frac{\pi (\frac{x^2}{2})^2}{2}$. $a=0, b=1$, in terms of $dx$. Integral equation = $\int_{0}^{1}\frac{\pi x^4}{8}\:dx$=$\frac{\pi}{8}\int_{0}^{1}x^4\:dx$=$\frac{\pi}{8}\cdot\frac{x^5}{5}\big|_{0}^{1}$=$\frac{1}{5}\cdot\frac{\pi}{8}$=$\frac{\pi}{40}$ \paragraph{blue}
+Rectangle with sides of base $s$, height $\frac{s}{2}$, has $A(x)=\frac{s^2}{2}$. In terms of $x$, this should still be $A(x)=\frac{x^2}{2}$. $a=0, b=1$, therefore the integral expression = $\int_{0}^{1}\frac{x^2}{2}\:dx=\frac{1}{2}\int_{0}^{1}x^2\:dx$. This can be rewritten to $\frac{1}{2}\cdot\frac{x^3}{3}\big|_{0}^{1}$. Which is $\frac{1}{6}$
+\paragraph{blue correction}
+Rectangle with sides of base $s$, height $\frac{s}{2}$, has $A(x)=\frac{s^2}{2}$. If $s=x^2$, this should then be $A(x)=\frac{x^4}{2}$. $a=0, b=1$, therefore the integral expression = $\int_{0}^{1}\frac{x^4}{2}\:dx=\frac{1}{2}\int_{0}^{1}x^4\:dx$. This can be rewritten to $\frac{1}{2}\cdot\frac{x^5}{5}\big|_{0}^{1}$. Which is $\frac{1}{10}$
+\paragraph{purple}
+Square with sides of base $s$, has $A(x)=s^2$. If $s=x^2$, this should then be $A(x)=x^4$. $a=0, b=1$, therefore the integral expression = $\int_{0}^{1}x^4\:dx=\int_{0}^{1}x^4\:dx$. This can be rewritten to $\frac{x^5}{5}\big|_{0}^{1}$. Which is $\frac{1}{5}$
+\paragraph{yellow}
+Isoceles triangle with sides of base $s$, has $A(x)=\frac{s^2}{2}$. If $s=x^2$, this should then be $A(x)=\frac{x^4}{2}$. $a=0, b=1$, therefore the integral expression = $\int_{0}^{1}\frac{x^4}{2}\:dx=\frac{1}{2}\int_{0}^{1}x^4\:dx$. This can be rewritten to $\frac{1}{2}\cdot\frac{x^5}{5}\big|_{0}^{1}$. Which is $\frac{1}{10}$
+\section{Practice Problem 1}
+Find the volume of the solid whose base is bounded by the graphs of $y=x+1$ and $y=x^2-1$, with the indicated cross-sections taken perpendicular to the $x$-axis (vertical).
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[
+                axis lines = left,
+                xmin=-3,xmax=3,ymin=-2,ymax=4,
+                legend pos=outer north east
+            ]
+            \addplot [mark=none, color=red, samples=100]{x+1};
+            \addplot [mark=none, color=blue, samples=100]{x^2-1};
+            \legend{$y=x+1$, $y=x^2-1$}
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+\par
+First we must find the ranges for which the two functions are bound. Let us set the equations equal and find the intercepts.
+\begin{align}
+    x+1            & =x^2-1 \\
+    x^2-x-2        & =0     \\
+    (x-2)(x+1)     & =0     \\
+    \text{Roots: } & 2, -1
+\end{align}
+Now we must calculate $x$ within the bounds, which is $x+1-(x^2-1) = -x^2+x+2$
+\subsection{(a) Square}
+\paragraph{Solution} Area of a square is $s^2$. Therefore $A(x)=s^2$. In terms of $x$, this will be $A(x)=(-x^2+x+2)^2$, which I don't want to do. Man I'll do it.
+\begin{align}
+    (-x^2+x+2)^2 & =(-x^2+x+2)(-x^2+x+2)               \\
+                 & = x^4-x^3-2x^2-x^3+x^2+2x-2x^2+2x+4 \\
+                 & = x^4-2x^3-3x^2+4x+4                \\
+\end{align}
+$a=-1$ and $b=2$. Therefore, the integral equation is
+\begin{align}
+    \int_{-1}^{2}x^4-2x^3-3x^2+4x+4\:dx & =\frac{x^5}{5}-\frac{x^4}{2}-x^3+2x^2+4x\Big|_{-1}^{2} \\
+                                        & =(\frac{32}{5})+(\frac{17}{10})                        \\
+                                        & =\frac{81}{10}                                         \\
+                                        & =\boxed{8.100}
+\end{align}
+\subsection{(a) Rectangles of Height $1$}
+\paragraph{Solution} Area of a rectange with height $1$ is just $s$. Therefore $A(x)=s$. In terms of $x$, this will be $A(x)=-x^2+x+2\:dx$
+$a=-1$ and $b=2$. Therefore, the integral equation is
+\begin{align}
+    \int_{-1}^{2}-x^2+x+2\:dx & =-\frac{x^3}{3}+\frac{x^2}{2}+2x\Big|_{-1}^{2} \\
+                              & = (\frac{10}{3})-(-\frac{7}{6})                \\
+                              & = \frac{20}{6}+\frac{7}{6}                     \\
+                              & = \frac{27}{6}                                 \\
+                              & = \boxed{4.5}
+\end{align}
+\subsection{}
+
+\end{document}

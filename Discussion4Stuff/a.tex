@@ -1,0 +1,53 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{
+    Shengdong Li
+    Calc 1
+}
+\rfoot{
+    Page \thepage
+}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+
+\begin{document}
+\title{Response to Aaron Li}
+\author{by Shengdong Li}
+\date{23 April 2020}
+\maketitle
+
+\section{Intro}
+Hey Aaron, thank you so much for replying to my post! I was about to redo my initial discussion because I just realized that the initial problem is based off of the first name, but seeing as to the fact that you already replied to me, hopefully it won't be too big of a deal. Anyways, really good job using the disc and washer method!
+
+\section{Regarding the Disc and Washer Method}
+In your reply to my intial post, you mentioned how you didn't really know how to solve this problem using using discs, but was quite confident with using washers and shells. However, I think that you're already using the ``disk/washer method'' quite well! The washer method is really just subtracting one volume found using a wider disc from the other volume found using the smaller disc. For example, this formula that you used for the washer method...
+$$
+\pi\int_{0}^{1}\left(\left(y^{\frac{1}{2}}\right)^{2}-\left(y^{2}\right)^{2}\right)dy
+$$
+Can be looked at more generally as in the form of
+$$
+\pi\int_{a}^{b}\left(\left(f\left(y\right)\right)^{2}-\left(g\left(y\right)\right)^{2}\right)dy
+$$
+Which can be can be rewritten as two integrals
+$$
+\pi\int_{a}^{b}\left(f\left(y\right)\right)^{2}dy-\pi\int_{a}^{b}\left(g\left(y\right)\right)^{2}dy
+$$
+Here, it is clear that either one of the integrals is basically finding the volume of the shape rotated around the $y$-axis using ``discs''. More specifically,
+$$
+\pi\int_{a}^{b}\left(f\left(y\right)\right)^{2}dy
+$$
+Is the same thing as finding the volume of the outside curve using discs, and 
+$$
+\pi\int_{a}^{b}\left(g\left(y\right)\right)^{2}dy
+$$
+Is just finding the volume of the inner curve. I hope this helped! Thank you for replying to my post!
+\end{document}
+

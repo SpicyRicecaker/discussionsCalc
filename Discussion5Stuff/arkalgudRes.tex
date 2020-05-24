@@ -1,0 +1,73 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{
+    Shendong Li
+    Calc 1
+}
+\rfoot{
+    Page \thepage
+}
+
+\begin{document}
+\title{(Initial) Response to Aadhya Arkalgud}
+\author{by Shengdong Li}
+\date{1 May 2020}
+\maketitle
+\section{Intro}
+Hey Aadhya! You're right, this problem has a really messy process, and was overall really annoying to do. I had to recheck my work multiple times to make sure that the answer was right... and hopefully it is. That being said, here's the work.
+\section{Solution}
+    First recall how to integrate by parts
+\begin{equation}
+    \int f\left(x\right)g'\left(x\right)dx=f\left(x\right)g\left(x\right)-\int f'\left(x\right)g\left(x\right)dx
+\end{equation}
+\begin{align}
+    \intertext{Now for the problem at hand...}
+    &\int e^{2x}\left(\cos\left(\frac{1}{4}x\right)\right)dx                                                                                                                                                                      
+    \intertext{Define the $f$ and $g'$ functions, find the $f'$ and $g$ functions}
+    u&=\cos\left(\frac{1}{4}x\right)                                                                                                                                                                                              \\
+    du&=-\frac{1}{4}\sin\left(\frac{1}{4}x\right)                                                                                                                                                                                 \\
+    dv&=e^{2x}                                                                                                                                                                                                                    \\
+    v&=\frac{1}{2}e^{2x}                                                                                                                                                                                                          \\
+    \intertext{Now plugin to the integration by parts formula}
+    &=\frac{1}{2}e^{2x}\cos\left(\frac{1}{4}x\right)+\frac{1}{8}\int e^{2x}\sin\left(\frac{1}{4}x\right)dx                                                                                                                 \\
+    \intertext{Redefine the $f$ and $g$ functions and find the $f'$ and $g$ functions for this new integral}
+    &\int e^{2x}\sin\left(\frac{1}{4}x\right)dx                                                                                                                                                                            \\
+    u&=\sin\left(\frac{1}{4}x\right)                                                                                                                                                                                              \\
+    du&=\frac{1}{4}\cos\left(\frac{1}{4}x\right)                                                                                                                                                                                  \\
+    dv&=e^{2x}                                                                                                                                                                                                                    \\
+    v&=\frac{1}{2}e^{2x}                                                                                                                                                                                                          \\
+    \intertext{Now plugin to the integration by parts formula}
+    &=\frac{1}{2}e^{2x}\sin\left(\frac{1}{4}x\right)-\frac{1}{8}\int e^{2x}\cos\left(\frac{1}{4}x\right)dx                                                                                                                 
+\end{align}
+\begin{align}
+    \intertext{Now we can plug the result of this new integral back in tothe original equation}
+    =\frac{1}{2}e^{2x}\cos\left(\frac{1}{4}x\right)+\frac{1}{8}\left(\frac{1}{2}e^{2x}\sin\left(\frac{1}{4}x\right)-\frac{1}{8}\int e^{2x}\cos\left(\frac{1}{4}x\right)dx\right)                                          \\
+    \intertext{... And distribute factors}
+    =\frac{1}{2}e^{2x}\cos\left(\frac{1}{4}x\right)+\frac{1}{16}e^{2x}\sin\left(\frac{1}{4}x\right)-\frac{1}{64}\int e^{2x}\cos\left(\frac{1}{4}x\right)dx                                                                \\
+    \intertext{Now recall the left side of the equation}
+    \int e^{2x}\left(\cos\left(\frac{1}{4}x\right)\right)dx=\frac{1}{2}e^{2x}\cos\left(\frac{1}{4}x\right)+\frac{1}{16}e^{2x}\sin\left(\frac{1}{4}x\right)-\frac{1}{64}\int e^{2x}\cos\left(\frac{1}{4}x\right)dx
+\end{align}
+\begin{align}
+    \intertext{We can move this new integral over to the left...}
+    =\int e^{2x}\left(\cos\left(\frac{1}{4}x\right)\right)dx+\frac{1}{64}\int e^{2x}\cos\left(\frac{1}{4}x\right)dx&=\frac{1}{2}e^{2x}\cos\left(\frac{1}{4}x\right)+\frac{1}{16}e^{2x}\sin\left(\frac{1}{4}x\right) \\
+    =\frac{65}{64}\int e^{2x}\cos\left(\frac{1}{4}x\right)dx&=\frac{1}{2}e^{2x}\cos\left(\frac{1}{4}x\right)+\frac{1}{16}e^{2x}\sin\left(\frac{1}{4}x\right)                                                                
+\end{align}
+\begin{align}
+    \intertext{Multiply both sides by the reciprocal, and simplify}
+    &=\frac{65}{64}\left(\frac{1}{2}e^{2x}\cos\left(\frac{1}{4}x\right)+\frac{1}{16}e^{2x}\sin\left(\frac{1}{4}x\right)\right)                                                                                                    \\
+    &=\boxed{\frac{65}{128}e^{2x}\cos\left(\frac{1}{4}x\right)+\frac{65}{1024}e^{2x}\sin\left(\frac{1}{4}x\right)                                                                                                                        }
+\end{align}
+\section{Conclusion}
+I learned a lot from this question; through making mistakes over and over, I realized that writing down each and every step, even if simple, really helps keep the small calculation errors down. I hope that my solution helped!
+\bigskip
+\par
+Cheers, 
+\par
+Andy Li
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{
+    Shengdong Li
+    Calc 1
+}
+\rfoot{
+    page \thepage
+}
+
+\usepackage{indentfirst}
+
+\begin{document}
+\title{Response to Shreyes Joshi}
+\author{by Shengdong Li}
+\date{17 May 2020}
+\maketitle
+
+\section{Intro}
+Hey Shreyes! Great job on the initial post! I liked how the presentation was quite clear and precise. I wanted to touch on two things, one is a different way to approach the second problem, and the other thing has to do with some minor syntax errors.
+
+\section{A Different Way to Approach $\int\sec^{3}x\tan^{3}xdx$}
+\subsection{Using $u=\sec x$}
+In solving this integral, you decided to use the trig identity $\tan^{2}x=\sec^{2}x-1$ and u-sub $u=\sec x$ in order to solve the integral. However, I found that you could restructure the integral and use a different trig identity along with a different u-sub isntead.
+\subsection{Using $u=\cos x$}
+\begin{align}
+    \intertext{First, we put $\tan$ and $\sec$ in terms of $\cos$ and $\sin$}
+    \sec^{3}x                                                      & =\frac{1}{\cos^{3}x}                                                                    \\
+    \tan^{3}x                                                      & =\frac{\sin^{3}x}{\cos^{3}x}
+    \intertext{Therefore,}
+    \int_{ }^{ }\sec^{3}x\tan^{3}xdx                               & =\int_{ }^{ }\left(\frac{1}{\cos^{3}x}\right)\left(\frac{\sin^{3}x}{\cos^{3}x}\right)dx \\
+                                                                   & =\int_{ }^{ }\frac{\sin^{3}x}{\cos^{6}x}dx
+    \intertext{Now we can use the trig identity $\sin^{2}x=1-\cos^{2}x$}
+                                                                   & =\int_{ }^{ }\frac{\left(1-\cos^{2}x\right)\sin x}{\cos^{6}x}dx
+    \intertext{Now $u$-sub!}
+    u                                                              & =\cos x                                                                                 \\
+    du                                                             & =-\sin xdx                                                                              \\
+    -du                                                            & =\sin xdx                                                                               \\
+    \intertext{Now plugin $u$ and $du$ values}
+    \int_{ }^{ }\frac{\left(1-\cos^{2}x\right)\sin x}{\cos^{6}x}dx&=-\int_{ }^{ }\frac{\left(1-u^{2}\right)du}{u^{6}}
+    \intertext{Seperate numerator and put in negative exponents}
+    &=-\int_{ }^{ }\left(\frac{1}{u^{6}}-\frac{u^{2}}{u^{6}}\right)du\\
+    &=-\int_{ }^{ }\left(u^{-6}-u^{-4}\right)du
+    \intertext{Integrate}
+    &=-\left(\frac{-u^{-5}}{5}-\left(-\frac{u^{-3}}{3}\right)\right)\\
+    &=-\left(\frac{-u^{-5}}{5}+\frac{u^{-3}}{3}\right)\\
+    &=\frac{u^{-5}}{5}-\frac{u^{-3}}{3}
+    \intertext{Plug Back in the value of $u=\cos x$}
+    &=\frac{\left(\cos x\right)^{-5}}{5}-\frac{\left(\cos x\right)^{-3}}{3}
+    \intertext{Recall that $\frac{1}{\cos x}=\sec x$}
+    &=\boxed{\frac{\sec^{5}x}{5}-\frac{\sec^{3}x}{3}+C}
+\end{align}
+
+    \subsection{A Comparison of Methods}
+    At the end of the day, using $u=\sec x$ is definitely the much easier method because you don't need to manipulate the original integral as much and you don't have to deal with negative signs and exponenets. However, I did learn a lot from doing the problem using $u=\cos x$, namely that $\sec x$ and $\tan x$ functions can often be solved through their components if needed. 
+    \section{Minor Syntax Errors}
+    Don't forget to add $+C$ to the end of your integrals and absolute values around your $\ln$s! \bigskip \par
+    Cheers, \par
+    Andy Li
+\end{document}

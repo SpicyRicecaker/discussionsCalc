@@ -1,0 +1,81 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{
+    Shengdong Li
+    Calc 1
+}
+\rfoot{
+    Page \thepage
+}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+
+\begin{document}
+\title{Response to Maggie's Response}
+\author{by Shengdong Li}
+\date{19 April 2020}
+\maketitle
+
+\section{Intro}
+Hello Maggie! I'm happy to report that your area of avocado and answer matched up to my own solution for the problem. Thanks a lot for doing it, I thought for sure that nobody would actually read the long backstory. Overall, I really liked the work that you showed and I couldn't have imagined how painful it was to write out every step. Allow me to summarize your steps in solving Bob's dilemma...
+
+\section{Summary}
+First, you wanted to calculate the avocado volume disregarding the pit, so you solved the ellipse equation for $y$. You then used circular cross sections perpendicular to the $x$-axis to find and integrate the area function, using $u$-substitution along the way. For the pit, you used the same same steps with a different function and range. Finally, you subtracted the avocado volume disregarding the pit by the pit, and divided the final answer by half to get the volume of the slice of avocado.
+\section{Analysis}
+I thought that your use of circular cross-sections were very clever! Looking at your solution, I can see now that compared to using semicircles, using a circular cross-section is much less error-prone and also requires less writing, removing the need for $\frac{\pi}{2}$ and instead resulting only in $\pi$.
+\subsection{Regarding the use of $u$-sub}
+One small thing that I think you can optimize about your solution process is your use of $u$-sub: \textbf{not plugging in the $x$ back into $u$, but rather just updating the range of the $u$ sub instead.}
+\begin{align}
+    \intertext{At this step in calculating both avocado volume...}
+    \int_{-5}^{7}\pi\left(12.25-\frac{12.25}{36}\left(x-1\right)^{2}\right)dx
+\end{align}
+\begin{align}
+    \intertext{...You began to $u$-sub...}
+    u  & =x-1                                                                                                              \\
+    du & =dx                                                                                                               \\
+       & =\pi\int_{-5}^{7}\left(12.25-\frac{12.25}{36}\left(u\right)^{2}\right)du
+    \intertext{...Then integrated...}
+       & =\pi\left(12.25u-\frac{12.25}{36}\left(\frac{1}{3}\right)u^{3}\right)\Big|_{-5}^{7}
+    \intertext{...But then \textbf{plugged $x$ back in.}}
+       & =\pi\left(12.25\left(x-1\right)-\frac{12.25}{36}\left(\frac{1}{3}\right)\left(x-1\right)^{3}\right)\Big|_{-5}^{7}
+\end{align}
+\begin{align}
+    \intertext{Now this works, but you are accounting for the $(x-1)$ \textbf{twice} when you actually find the numerical value}
+     & =\pi\left(12.25\left(\left(7\right)-1\right)-\frac{12.25}{36}\left(\frac{1}{3}\right)\left(\left(7\right)-1\right)^{3}-\left(12.25\left(\left(-5\right)-1\right)-\frac{12.25}{36}\left(\frac{1}{3}\right)\left(\left(-5\right)-1\right)^{3}\right)\right)
+\end{align}
+\begin{align}
+    \intertext{Instead of doing this, you can just update the \textbf{range of the integral} after $u$-subbing. I like to do this right after deriving $u$}
+    u  & =x-1                                                                                                                                           \\
+    du & =dx
+    \intertext{\textbf{Plugin the ranges, $7$ and $-5$} into $x$ to get the new ranges}
+    u  & =x-1                                                                                                                                           \\
+    a  & =(7)-1                                                                                                                                         \\
+       & =\boxed{6}                                                                                                                                     \\
+    b  & =(-5)-1                                                                                                                                        \\
+       & =\boxed{-6}
+    \intertext{Now, $u$-sub the ranges along with the $u$ and $du$ in}
+       & =\pi\int_{-6}^{6}\left(12.25-\frac{12.25}{36}\left(u\right)^{2}\right)du
+    \intertext{You can now treat $u$ as $x$, and don't need to plugin $x$ back in. What's also cool here is that \textbf{Since we know the left and right sides of an ellipse equal, we can turn $-6$ into $0$ and factor out the $2$}}
+       & =2\pi\int_{0}^{6}\left(12.25-\frac{12.25}{36}\left(u\right)^{2}\right)du
+    \intertext{...And if we integrate and solve, we get the same answer in much fewer steps}
+       & =2\pi\left(12.25u-\frac{12.25}{108}u^{3}\right)\Big|_{0}^{6}                                                                                   \\
+       & =2\pi\left(12.25\left(6\right)-\frac{12.25}{108}\left(6\right)^{3}-\left(12.25\left(0\right)-\frac{12.25}{108}\left(0\right)^{3}\right)\right) \\
+       & =2\pi\left(12.25\left(6\right)-\frac{12.25}{108}\left(6\right)^{3}\right)                                                                      \\
+       & =2\pi\left(49\right)                                                                                                                           \\
+       & =98\pi                                                                                                                                         \\
+       & \approx\boxed{307.88}
+\end{align}
+This also works the same way with the pit!
+\section{Conclusion}
+Overall though, I think that you did a fantastic job solving my problem! I'm very thankful to you for doing my problem and reading Bob's backstory!
+\bigbreak
+Cheers,\par
+-Andy
+\end{document}

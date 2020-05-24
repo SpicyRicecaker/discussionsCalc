@@ -1,0 +1,21 @@
+#+TITLE: Semester 2 Discussion 1 Ideas/Working
+#+DESCRIPTION: Ahh, can't think of an idea for the graph to choose...
+
+* Examples
+  | Graph              | Specifics                    | Integral Calculations         | Meaning                  |
+  |--------------------+------------------------------+-------------------------------+--------------------------|
+  | Speed v Time       | Speed(m) / Time(s) / Time(s) | m / s * s = m (Distance)      | Total Distance Traveled  |
+  | Temperature v Time | Temperature(c) / Time(s)     | c * s = cs (Temperature-Time) | Total Temperature Change |
+  |                    |                              |                               |                          |
+
+* Trying to Make Sense
+  1) This makes sense.
+  2) I don't think this means anything.
+
+* Therefore, We Would Preferably Have a *Rate* as our Initial Graph...
+  - Wait! We can just convert the damage reduction (%) per armor into armor-damage reduction *efficiency*. Then use this damage reduction efficiency to calculate the total armor?
+
+* Working
+  | Graph              | Specifics                    | Integral Calculations         | Meaning                  |
+  |--------------------+------------------------------+-------------------------------+--------------------------|
+  | Speed v Time       | Speed(m) / Time(s) / Time(s) | m / s * s = m (Distance)      | Total Distance Traveled  |

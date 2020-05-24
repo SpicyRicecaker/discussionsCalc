@@ -1,0 +1,72 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{
+    Shendong Li
+    Calc 1
+}
+\rfoot{
+    Page \thepage
+}
+
+\begin{document}
+\title{(Verification) Response to Andrew Fleischer}
+\author{by Shengdong Li}
+\date{2 May 2020}
+\maketitle
+\section{Intro}
+Hello Andrew! I'll try to verify your problem. 
+\section{Solution}
+\begin{align}
+    \intertext{Because the funtion is defining velocity, to find total distance travelled from $0$ to $t$, we just need to integrate the function from $0$ to $t$, which looks something like this:}
+    &\int_{0}^{t}t^{2}e^{-4t}dt
+    \intertext{From here we need to integrate by parts. Recalling the integration by parts formula here...}
+    \int_{ }^{ }f\left(x\right)g'\left(x\right)dx&=f\left(x\right)g\left(x\right)-\int_{ }^{ }f'\left(x\right)g\left(x\right)dx
+    \intertext{Define the $u$ and $dv$ functions for the integral at hand, then find the $du$ and $v$ functions}
+    u&=t^{2}\\
+    dv&=e^{-4t}\ dt\\
+    du&=2t\ dt\\
+    v&=-\frac{e^{-4t}}{4}
+    \intertext{Plugin to the integration by parts formula}
+    &=-\frac{t^{2}e^{-4t}}{4}\Big|_{0}^{t}-\int_{0}^{t}\ -\frac{2te^{-4t}}{4}dt
+    \intertext{The definite integral cancels here when $t=0$}
+    &=-\frac{t^{2}e^{-4t}}{4}-\int_{0}^{t}\ -\frac{2te^{-4t}}{4}dt
+    \intertext{Factor out the inside of the integral}
+    &=-\frac{t^{2}e^{-4t}}{4}+\frac{1}{2}\int_{0}^{t}\ te^{-4t}dt
+    \intertext{Define the $u$ and $dv$ functions for the new integral at hand, then find the $du$ and $v$ functions}
+    u&=t\\
+    dv&=e^{-4t}\ dt\\
+    du&=dt\\
+    v&=-\frac{e^{-4t}}{4}
+    \intertext{Plugin to the integration by parts equation}
+    &=-\frac{t^{2}e^{-4t}}{4}+\frac{1}{2}\left(-\frac{te^{-4t}}{4}\Big|_{0}^{t}-\int_{0}^{t}\ -\frac{e^{-4t}}{4}dt\right)
+    \intertext{The definite integrals cancel here again when $t=0$}
+    &=-\frac{t^{2}e^{-4t}}{4}+\frac{1}{2}\left(-\frac{te^{-4t}}{4}-\int_{0}^{t}\ -\frac{e^{-4t}}{4}dt\right)
+    \intertext{Factor out the inside of the integral}
+    &=-\frac{t^{2}e^{-4t}}{4}+\frac{1}{2}\left(-\frac{te^{-4t}}{4}+\frac{1}{4}\int_{0}^{t}\ e^{-4t}dt\right)
+    \intertext{Integrate the inside of the expression}
+    &=-\frac{t^{2}e^{-4t}}{4}+\frac{1}{2}\left(-\frac{te^{-4t}}{4}+\frac{1}{4}\left(-\frac{e^{-4t}}{4}\Big|_{0}^{t}\right)\right)
+    \intertext{The definite integral doesn't cancel this time}
+    &=-\frac{t^{2}e^{-4t}}{4}+\frac{1}{2}\left(-\frac{te^{-4t}}{4}+\frac{1}{4}\left(-\frac{e^{-4t}}{4}-\left(-\frac{1}{4}\right)\right)\right)
+    \intertext{Now we can just simplify}
+    &=-\frac{t^{2}e^{-4t}}{4}+\frac{1}{2}\left(-\frac{te^{-4t}}{4}+\frac{1}{4}\left(-\frac{e^{-4t}}{4}+\frac{1}{4}\right)\right)\\
+    &=-\frac{t^{2}e^{-4t}}{4}+\frac{1}{2}\left(-\frac{te^{-4t}}{4}-\frac{e^{-4t}}{16}+\frac{1}{16}\right)\\
+    &=-\frac{t^{2}e^{-4t}}{4}-\frac{te^{-4t}}{8}-\frac{e^{-4t}}{32}+\frac{1}{32}
+    \intertext{\textbf{It's very important here to note that the $\frac{1}{32}$ just gets sucked up by the $+C$, and you're left with just}}
+    &=-\frac{t^{2}e^{-4t}}{4}-\frac{te^{-4t}}{8}-\frac{e^{-4t}}{32}+c
+    \intertext{I've definitely gotten a problem wrong on not just the \textit{practice test} by not removing the consant value... You could also factor, which matches Yuangchang's comment above...}
+    &=\boxed{\frac{-e^{-4t}}{32}\left(8t^{2}+4t+1\right)+c}
+\end{align}
+\section{Conclusion}
+I hope that my comment helped!
+\bigskip
+\par
+Cheers, 
+\par
+Andy Li
+\end{document}

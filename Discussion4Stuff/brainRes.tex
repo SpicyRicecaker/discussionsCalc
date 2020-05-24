@@ -1,0 +1,92 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{
+    Shengdong Li
+    Calc 1
+}
+\rfoot{
+    Page \thepage
+}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+
+\begin{document}
+\title{Response to Brian Fang}
+\author{by Shengdong Li}
+\date{24 April 2020}
+\maketitle
+
+\section{Intro}
+Hey Brian! Great job on the initial post, I couldn't really find anything wrong with your process or answer, so I decided to do your problem using the disk/washer method.
+
+\section{Solution}
+Thanks to your graph, I can see that the triangle rotated around the $y$-axis clearly forms a volume with no open center, so we're going to be using discs.
+\begin{align}
+    \intertext{We'll begin by calculating the volume of the area bound by $y=6-x$. First put the equation in terms of $y$}
+    y                                                & =6-x                                                                                              \\
+    x+y                                              & =6                                                                                                \\
+    x                                                & =\boxed{6-y}
+    \intertext{From the graph, it's clear that the lower bound is $4$ and the upper bound is $6$}
+    a                                                & =\boxed{4}                                                                                        \\
+    b                                                & =\boxed{6}
+    \intertext{Plugin to the disc/washer equation}
+    V                                                & =\pi\int_{a}^{b}\left(f\left(y\right)\right)^{2}dy                                                \\
+                                                     & =\pi\int_{4}^{6}\left(6-y\right)^{2}dy
+    \intertext{$u$-sub}
+    u                                                & =6-y                                                                                              \\
+    du                                               & =-dy                                                                                              \\
+    -du                                              & =dy
+    \intertext{Update ranges}
+    a                                                & =6-\left(4\right)                                                                                 \\
+    a                                                & =\boxed{2}                                                                                        \\
+    b                                                & =6-\left(6\right)                                                                                 \\
+    b                                                & =\boxed{0}
+    \intertext{Plugin $u$ and $du$, with new ranges, then integrate!}
+    \pi\int_{4}^{6}\left(6-y\right)^{2}dy            & =
+    -\pi\int_{2}^{0}u^{2}du                                                                                                                              \\
+                                                     & =-\pi\left(\frac{u^{3}}{3}\right)\Big|_{2}^{0}                                                    \\
+                                                     & =-\pi\left(\frac{\left(0\right)^{3}}{3}-\left(\frac{\left(2\right)^{3}}{3}\right)\right)          \\
+                                                     & =-\pi\left(-\frac{\left(2\right)^{3}}{3}\right)                                                   \\
+                                                     & =-\pi\left(-\frac{8}{3}\right)                                                                    \\
+                                                     & =\boxed{\frac{8\pi}{3}}
+    \intertext{Now let's do the same thing with $y=3x-2$. First put the equation in terms of $y$}
+    y                                                & =3x-2                                                                                             \\
+    3x                                               & =y+2                                                                                              \\
+    x                                                & =\boxed{\frac{\left(y+2\right)}{3}}
+    \intertext{From the graph, it is apparent that the lower range is $-2$ and the upper range is $4$}
+    a                                                & =\boxed{-2}                                                                                       \\
+    b                                                & =\boxed{4}
+    \intertext{Plugin to the disc/washer formula}
+    V                                                & =\pi\int_{a}^{b}\left(f\left(y\right)\right)^{2}dy                                                \\
+                                                     & =\pi\int_{-2}^{4}\left(\frac{\left(y+2\right)}{3}\right)^{2}dy                                    \\
+                                                     & =\frac{\pi}{9}\int_{-2}^{4}\left(y+2\right)^{2}dy                                                 \\
+    \intertext{$u$-sub}
+    u                                                & =y+2                                                                                              \\
+    du                                               & =dy                                                                                               \\
+    \intertext{Update the ranges}
+    a                                                & =\left(-2\right)+2                                                                                \\
+                                                     & =\boxed{0}                                                                                        \\
+                                                     & b=\left(4\right)+2                                                                                \\
+                                                     & =\boxed{6}
+    \intertext{Plugin $u$ and $du$, with new ranges, then integrate!}
+    \frac{\pi}{9}\int_{-2}^{4}\left(y+2\right)^{2}dy & =\frac{\pi}{9}\int_{0}^{6}u^{2}du                                                                 \\
+                                                     & =\frac{\pi}{9}\left(\frac{u^{3}}{3}\right)\Big|_{0}^{6}                                           \\
+                                                     & =\frac{\pi}{9}\left(\frac{\left(6\right)^{3}}{3}-\left(\frac{\left(0\right)^{3}}{3}\right)\right) \\
+                                                     & =\frac{\pi}{9}\left(\frac{\left(6\right)^{3}}{3}\right)                                           \\
+                                                     & =\frac{\pi}{9}\left(72\right)                                                                     \\
+                                                     & =\boxed{8\pi}
+    \intertext{Now we just add up the volumes of the two equations to get our final answer}
+    \frac{8\pi}{3}+8\pi                              & =\frac{24\pi}{3}+\frac{8\pi}{3}                                                                   \\
+                                                     & =\boxed{\frac{32\pi}{3}}
+\end{align}
+\section{Conclusion}
+It looks like we got the same answers! Good job on the initial post, Brian!
+\end{document}

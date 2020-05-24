@@ -1,0 +1,58 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{
+    Shengdong Li
+    Calc 1
+}
+\rfoot{
+    Page \thepage
+}
+
+\usepackage{indentfirst}
+
+\begin{document}
+\title{Response to Sashank Meka}
+\author{by Shengdong Li}
+\date{16 May 2020}
+\maketitle
+
+\section{Intro}
+Hey Sashank! Good job on the initial lesson. I really enjoyed your explanations for each of your steps and the work you showed, like which half angle identity you used. However, I did notice another way that you could've approached the first problem and a few other small complaints.
+
+\section{Regarding Creative Substitution}
+So to solve for the $A$ and $B$ values in the partial fraction decomp, it looked like you chose to solve it using a system of equations. Another way that you could've approached this problem is by substituting out some values for $x$ that might get you the $A$ and $B$ values. And for this specific problem, the linear factors make creative substitution really easy.
+\begin{align}
+    \intertext{At this step right here...}
+    \frac{x+5}{\left(x+2\right)\left(x-1\right)}&=\frac{A}{x+2}+\frac{B}{x-1}
+    \intertext{After you multiply out the denominator of the fraction to the left...}
+    x+5&=A\left(x-1\right)+B\left(x+2\right)
+    \intertext{Instead of distributin factors and solving it as a system of equations, you can set $X$ to some value that cancels out a variable. Setting $x=1$ in this case removes the $A$ and gives us the value of $B$}
+    x&=1                                                                               \\
+    \left(1\right)+5&=A\left(\left(1\right)-1\right)+B\left(\left(1\right)+2\right)    \\
+    6&=3B                                                                              \\
+    B&=2
+    \intertext{While setting $x=-2$ removes the value of $B$ and gives us the value of $A$}
+    x&=-2                                                                              \\
+    \left(-2\right)+5&=A\left(\left(-2\right)-1\right)+B\left(\left(-2\right)+2\right) \\
+    3&=-3A                                                                             \\
+    A&=-1
+    \intertext{From there, you can just solve the integral normally.}
+\int_{ }^{ }\frac{x+5}{\left(x+2\right)\left(x-1\right)}dx&=\int_{ }^{ }\frac{-1}{x+2}+\frac{2}{x-1}dx\\
+&=2\int_{ }^{ }\frac{1}{x-1}dx-\int_{ }^{ }\frac{1}{x+2}dx\\
+&=\boxed{2\ln\left|x-1\right|-\ln\left|x+2\right|+C}
+\end{align}
+\section{Other Small Things}
+Don't forget that $\ln$ s have absolute values, and always add the $+C$ to the final integral!
+\section{Conclusion}
+Overall, I think that you did a great job solving both integrals and explaining how you did it. The small $+C$ and $\ln$ errors were the only ones I could find. Good job Sashank!
+\end{document}

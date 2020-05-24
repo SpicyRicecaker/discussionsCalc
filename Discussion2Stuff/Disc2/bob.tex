@@ -1,0 +1,96 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%Need this for equations + math
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\rhead{
+    Shengdong Li
+    Table 7
+    Calc 1
+}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+\title{Response to Arya Thompson}
+\author{by Shengdong Li}
+\date{2 April 2020}
+\maketitle
+
+\section{Intro}
+Hello Arya!
+I couldn't really find someone that had a different letter last name than me that didn't already have their work checked, so I'm going to try to do your problem!
+\section{Prompt}
+\textit{
+    \textbf{Last Names (S-Z):}
+    Evaluate $\int\sin x\cos^2 x\:dx$, twice. First, use $u = \sin x$ and the fact that $\cos^2 x+\sin^2 x=1$. Then use $u=\cos x$. If you simplify, it's pretty easy to see that these answers are the same, so instead, identify the superior way, and why.
+}
+\textbf{
+    \\~\\ Solution using $u = \sin x$
+}
+\begin{align}
+    \intertext{First setup the equation and $u$ variables}
+    \nonumber \int\sin x\cos^2 x\:dx                                                              \\
+    \nonumber u                               & =\sin x                                           \\
+    du                                        & =\cos x\:dx                                       \\
+    \intertext{Then let's rewrite the original expression so that it's easier to slot in our variables later}
+    \int\sin x\cos^2 x\:dx                    & =\int\sin x\cos x\cos x\:dx                       \\
+    \intertext{Then calculate $\cos x$ using the trig identity}
+    \nonumber \cos^2 x+\sin^2 x               & =1                                                \\
+    \nonumber \cos^2 x                        & =1-\sin^2 x                                       \\
+    \cos x                                    & =\sqrt{1-\sin^2 x}                                \\
+    \intertext{Plugin that trig identity to the expression}
+    \int\sin                    x\cos^2 x\:dx & =\int\sin x\sqrt{1-\sin^2x}\cos x\:dx             \\
+    \intertext{Plugin $du$ and $u$ into the expression}
+    \int\sin                    x\cos^2 x\:dx & =\int u\sqrt{1-u^2}\:du
+    \intertext{It's hard to continue here, unless we apply a $v$ sub here}
+    \nonumber v                               & =1-u^2                                            \\
+    \nonumber dv                              & =-2u\:du                                          \\
+    -\frac{1}{2}dv                            & =u\:du                                            \\
+    \intertext{Now we can plugin $v$ and $dv$ into the $u$ subbed equation}
+    \int u\sqrt{1-u^2}\:du                    & =-\frac{1}{2}\int\sqrt{v}\:dv
+    \intertext{Then turn the square root into fraction form and integrate}
+    \nonumber                                 & =-\frac{1}{2}\int v^{\frac{1}{2}}\:dv             \\
+    \nonumber                                 & =-\frac{1}{2}(\frac{2\cdot v^{\frac{3}{2}}}{3})+c \\
+                                              & =-\frac{v^{\frac{3}{2}}}{3}+c
+    \intertext{Recall the values of $v$ and $u$ to plugin in terms of $x$}
+    \nonumber u                               & =\sin x                                           \\
+    \nonumber v                               & =1-u^2                                            \\
+    \nonumber                                 & =1-\sin^2x                                        \\
+    -\frac{v^{\frac{3}{2}}}{3}+c              & =-\frac{(1-\sin^2x)^{\frac{3}{2}}}{3}+c           \\
+    \intertext{We can rewrite $1-\sin^2x$ using the original trig identity, which allows for the cancelling of the exponent}
+    \nonumber                                 & =-\frac{(\cos^2x)^{\frac{3}{2}}}{3}+c             \\
+                                              & =\boxed{-\frac{\cos^3x}{3}+c}
+\end{align}
+
+\setcounter{equation}{0}
+
+\textbf{
+    \\~\\ Solution using $u = \cos x$
+}
+\begin{align}
+    \intertext{First setup the equation and $u$ variables}
+    \nonumber \int\sin x\cos^2 x\:dx                       \\
+    \nonumber u            & =\cos x                       \\
+    \nonumber du           & =-\sin x\:dx                  \\
+    -du                    & =\sin x\:dx                   \\
+    \intertext{Plugin $du$ and $u$ into the original equation}
+    \int\sin x\cos^2 x\:dx & =-\int u^2\:du                \\
+    \intertext{Integrate.}
+                           & =-\frac{u^3}{3}+c             \\
+    \intertext{Plugin the value of $u$ in terms of $x$}
+                           & =\boxed{-\frac{\cos^3x}{3}+c}
+\end{align}
+
+\section{Conclusion}
+As you can see from the work, solving using $u=\cos x$ is much better than $u=\sin x$. Counting the steps shows that there are almost double the amount of major steps that go into solving the latter vs. the former. Looking at the techniques involved, $u=\sin x$ required you to additionally know a trig identity, recognize when to double substitute variables, and also simplify many times.\\~\\
+It looks like we both got the same answers, Arya! I thought that your work had clear steps and helpful comments. Good job on the initial post!
+
+
+
+\end{document}

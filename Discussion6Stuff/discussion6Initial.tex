@@ -1,0 +1,175 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{
+    Shengdong Li
+    Calc 1
+}
+\rfoot{
+    Page \thepage
+}
+
+\usepackage{chngcntr}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
+\begin{document}
+\title{Initial Post}
+\author{by Shengdong Li}
+\date{8 May 2020}
+\maketitle
+
+\section{$\int_{ }^{ }x^{2}\cos xdx$}
+Our goal here is to dissolve the $x^2$. Integration by parts.
+\begin{align}
+    u  & =x^{2}    \\
+    dv & =\cos xdx \\
+    du & =2xdx     \\
+    v  & =\sin x
+\end{align}
+Integration by parts again.
+\begin{align}
+    u  & =2x       \\
+    dv & =\sin xdx \\
+    du & =2dx      \\
+    v  & =-\cos x
+\end{align}
+\setcounter{equation}{0}
+\section{$\int_{ }^{ }\frac{\left(\ln x\right)^{2}}{x}dx$}
+U-sub.
+\begin{align}
+    u  & =\ln x         \\
+    du & =\frac{1}{x}dx
+\end{align}
+\setcounter{equation}{0}
+\section{$\int_{ }^{ }\frac{x^{2}}{x+4}dx$}
+We want to U-sub to split up the numerator.
+\begin{align}
+    u     & =x+4                  \\
+    x     & =u+4                  \\
+    x^{2} & =\left(u+4\right)^{2}
+\end{align}
+\setcounter{equation}{0}
+\section{$\int_{ }^{ }e^{x}\sin xdx$}
+The goal here is to get the original integral by doing by parts multiple times.
+By parts first.
+\begin{align}
+    u  & =e^{x}    \\
+    dv & =\sin xdx \\
+    du & =e^{x}dx  \\
+    v  & =-\cos x
+\end{align}
+By parts again.
+\begin{align}
+    u  & =e^{x}    \\
+    dv & =\cos xdx \\
+    du & =e^{x}dx  \\
+    v  & =\sin x
+\end{align}
+\setcounter{equation}{0}
+\section{$\int_{ }^{ }x^{3}e^{x^{2}}dx$}
+U-sub first.
+\begin{align}
+    u  & =x^{2} \\
+    du & =2x
+\end{align}
+Then integrate by parts.
+\begin{align}
+    u  & =u       \\
+    dv & =e^{u}du \\
+    du & =du      \\
+    v  & =e^{u}
+\end{align}
+\setcounter{equation}{0}
+\section{$
+      \int_{ }^{ }\cos\left(\sqrt{x}\right)dx
+  $}
+First u-sub.
+\begin{align}
+    u                  & =x^{\frac{1}{2}}             \\
+    du                 & =\frac{dx}{2x^{\frac{1}{2}}} \\
+    2x^{\frac{1}{2}}du & =dx
+\end{align}
+The components in the $du$ allows us to $u$-sub again. Now we can integrate by parts to dissolve the extra $u$.
+\begin{align}
+    u  & =u                    \\
+    dv & =\cos\left(u\right)du \\
+    du & =du                   \\
+    v  & =\sin\left(u\right)
+\end{align}
+\setcounter{equation}{0}
+\section{$
+      \int_{ }^{ }\frac{\ln x}{x^{5}}dx
+  $}
+Integrate by parts.
+\begin{align}
+    u  & =\ln x             \\
+    du & =\frac{1}{x}dx     \\
+    dv & =x^{-5}dx          \\
+    v  & =-\frac{x^{-4}}{4}
+\end{align}
+\setcounter{equation}{0}
+\section{$
+      \int_{ }^{ }\frac{xdx}{x^{2}+4x+4}
+  $}
+Complete the square and then integrate by parts.
+\begin{align}
+       & \frac{x}{\left(x+2\right)^{2}} \\
+    u  & =x+2                           \\
+    x  & =u-2                           \\
+    du & =dx
+\end{align}
+\setcounter{equation}{0}
+\section{$
+      \int_{ }^{ }x\cos\left(x^{2}\right)dx
+  $}
+Simple u-sub problem.
+\begin{align}
+    u  & =x^{2} \\
+    du & =2xdx
+\end{align}
+\setcounter{equation}{0}
+\section{$
+      \int_{ }^{ }\frac{\left(3x^{2}-1\right)dx}{x\left(x^{2}-1\right)}
+  $}
+Simple u-sub problem.
+\begin{align}
+    u  & =x^{3}-x    \\
+    du & =3x^{2}-1dx
+\end{align}
+\setcounter{equation}{0}
+\section{$
+      \int_{ }^{ }\frac{x^{3}}{\sqrt{x^{2}+1}}dx
+  $}
+U-sub.
+\begin{align}
+    u     & =x^{2}+1 \\
+    x^{2} & =u-1     \\
+    du    & =2xdx
+\end{align}
+\setcounter{equation}{0}
+\section{$
+    \int_{ }^{ }x^{2}\tan^{-1}xdx
+$}
+Integrate by parts first to get rid of the $\arctan$
+\begin{align}
+    u  & =\tan^{-1}x        \\
+    du & =\frac{1}{x^{2}+1} \\
+    dv & =x^{2}dx           \\
+    v  & =\frac{x^{3}}{3}
+\end{align}
+Then u-sub
+\begin{align}
+    u     & =x^{2}+1 \\
+    x^{2} & =u-1     \\
+    du    & =2xdx
+\end{align}
+\end{document}

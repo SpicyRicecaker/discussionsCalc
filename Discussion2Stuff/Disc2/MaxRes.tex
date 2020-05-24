@@ -1,0 +1,95 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\rhead{
+    Shengdong Li
+    Table 7
+    Calc 1
+}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+\title{Response to Max Shi}
+\author{by Shengdong Li}
+\date{3 April 2020}
+\maketitle
+
+\section{Intro}
+Hello Max! Great work on the initial post, it was easy to follow and well thought out! \\~\\
+I also did this problem to check another person's work, and there are two areas in which my process differed a bit from yours.
+
+\section{Regarding the subsitution of $x$ with $u$}
+\begin{align}
+    \intertext{This is actually a very small thing, but instead of dividing by $\cos x$ to swap out $dx$ with $du$...}
+    \nonumber u                      & = \sin x                               \\
+    \nonumber du                     & = \cos x\:dx                           \\
+    \frac{du}{\cos x}                & = dx                                   \\
+    \nonumber \int\sin x\cos^2 x\:dx & = \int\sin x\frac{\cos^2x}{\cos x}\:du \\
+                                     & =\int \sin x\cos x\:du
+\end{align}
+\setcounter{equation}{0}
+\begin{align}
+    \intertext{You could also try to rearrange the original equation, and straight up slot in $du = \cos x\:dx$, like so}
+    \nonumber u                      & = \sin x                     \\
+    du                               & = \cos x\:dx                 \\
+    \nonumber \int\sin x\cos^2 x\:dx & = \int\sin x\cos x\cos x\:dx \\
+                                     & = \int\sin x \cos x\:du
+\end{align}
+\setcounter{equation}{0}
+\text{I feel like it's overall $1$ less step!}
+\section{Regarding $v$ and $w$ substitution}
+\begin{align}
+    \intertext{At this point...}
+    \nonumber \int u\sqrt{1-u^2}\:du
+    \intertext{Instead of substituting $u$ with $v$, and then $v$ with $w$ to integrate, which involves an extra array of steps:}
+    \nonumber v                              & =u^2                                        \\
+    \nonumber dv                             & =2u\:du                                     \\
+    \frac{1}{2}dv                            & =u\:du                                      \\
+    \int u\sqrt{1-u^2}\:du                   & =\frac{1}{2}\int\sqrt{1-v}\:dv              \\
+    \nonumber w                              & =1-v                                        \\
+    \nonumber dw                             & = -dv                                       \\
+    -dw                                      & = dv                                        \\
+    \nonumber -\frac{1}{2}\int\sqrt{1-v}\:dv & =-\frac{1}{2}\int\sqrt{w}\:dw               \\
+                                             & =-\frac{1}{2}\int w^{\frac{1}{2}}\:dw       \\
+    \nonumber                                & =-\frac{1}{2}(\frac{2w^{\frac{3}{2}}}{3})+c \\
+                                             & =-\frac{w^{\frac{3}{2}}}{3}+c               \\
+    \intertext{And having to backtrace like $3$ times to put it in terms of $x$ again}
+    \nonumber w                              & =1-v                                        \\
+    \nonumber v                              & =u^2                                        \\
+    \nonumber u                              & =\sin x                                     \\
+    \nonumber v                              & =\sin^2 x                                   \\
+    w                                        & = 1-\sin^2 x                                \\
+    \nonumber -\frac{w^{\frac{3}{2}}}{3}+c   & =-\frac{(1-\sin^2x)^{\frac{3}{2}}}{3}+c     \\
+                                             & =-\frac{(\cos^2x)^{\frac{3}{2}}}{3}+c       \\
+                                             & =\boxed{-\frac{\cos^3x}{3}+c}
+\end{align}
+\setcounter{equation}{0}
+\begin{align}
+    \intertext{You could also just set $v$ to $1-u^2$}
+    \nonumber v                      & =1-u^2                                       \\
+    \nonumber dv                     & =-2u\:du                                     \\
+    -\frac{1}{2}dv                   & = u\:du                                      \\
+    \nonumber \int u\sqrt{1-u^2}\:du & =-\frac{1}{2}\int\sqrt{v}\:dv                \\
+                                     & =-\frac{1}{2}\int v^{\frac{1}{2}}\:dv        \\
+    \nonumber                        & = -\frac{1}{2}(\frac{2v^{\frac{3}{2}}}{3})+c \\
+                                     & = -\frac{v^{\frac{3}{2}}}{3}+c
+    \intertext{And now you only have to backtrace twice!}
+    \nonumber v                      & =1-u^2                                       \\
+    \nonumber u                      & =\sin x                                      \\
+    v                                & =1-\sin^2x                                   \\
+    -\frac{v^{\frac{3}{2}}}{3}+c     & =-\frac{(1-sin^2x)^{\frac{3}{2}}}{3}+c       \\
+                                     & = -\frac{(cos^2x)^{\frac{3}{2}}}{3}+c        \\
+                                     & = \boxed{-\frac{cos^3x}{3}+c}
+\end{align}
+
+\section{Conclusion}
+Arranging the orginal equation differently to plugin $du=\cos x\:dx$ was a rather small optimization, but I feel that only $u$-subbing twice would've made your $u=\sin x$ experience a lot smoother. \\~\\
+Good job on the initial post though, Max!
+\end{document}

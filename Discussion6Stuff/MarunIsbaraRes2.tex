@@ -1,0 +1,67 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{
+    Shengdong Li
+    Calc 1
+}
+\rfoot{
+    Page \thepage
+}
+
+\usepackage{indentfirst}
+
+\begin{document}
+\title{Response to Kayra Isbara}
+\author{by Shengdong Li}
+\date{8 May 2020}
+\maketitle
+
+
+\section{Intro}
+Hey Kayra! Thanks for responding to my initial post. From what I saw, you solved the integral 
+$$
+    \int_{ }^{ }\frac{x^{2}}{x+4}dx
+$$
+two times, once using polynomial division into $u$-sub, and once using my method of going straight to $u$-sub.\par
+To me, it seemed polynomial division, like regular division, further subdivided the integral, $\int_{ }^{ }\frac{x^{2}}{x+4}dx$, into smaller individual parts, which could then be solved independently. \par
+I found it really intersting how at many times it seemed that using polynomial division yielded similar looking integrals to $u$-subbing at the beginning. \par
+Maybe that's becauase $u$-sub works in much the same way as polynomial division: it replaces complex parts of an integral with simpler parts that can be solved. \par
+In the end however, I agree with your conclusion that in this case using $u$-sub in the beginning was better than polynomial division, because the polynomial division led to $u$-sub anway.\par
+\section{Polynomial Division Once}
+As a side note, I noticed that you opted to use polynomial divison twice solving this integral, but using it once is also an option. I wonder if dividing once would be an effective method:
+\begin{align}
+&\int_{ }^{ }\frac{x^{2}}{x+4}dx\\
+\intertext{Then long division makes}
+&=\int_{ }^{ }x-\frac{4x}{x+4}dx
+\intertext{...Which we can then factor out}
+&=\int_{ }^{ }xdx-4\int_{ }^{ }\frac{x}{x+4}dx
+\intertext{Now let's $u$-sub}
+u&=x+4\\
+x&=u-4\\
+du&=dx
+\intertext{Plugin $du$ and $u$}
+&=\int_{ }^{ }xdx-4\int_{ }^{ }\frac{u-4}{u}du
+\intertext{We can seperate the numerator now}
+&=\int_{ }^{ }xdx-4\int_{ }^{ }\frac{u}{u}-\frac{4}{u}du
+\intertext{Which simplifies}
+&=\int_{ }^{ }xdx-4\int_{ }^{ }1-\frac{4}{u}du
+\intertext{Then split into even more integrals}
+&=\int_{ }^{ }xdx-4\left(\int_{ }^{ }du-4\int_{ }^{ }\frac{1}{u}du\right)
+\intertext{Integrate}
+&=\frac{x^{2}}{2}-4x+16-16\ln\left(x+4\right)
+\intertext{The constant gets sucked up by the $+C$}
+&=\boxed{\frac{x^{2}}{2}-4x-16\ln\left(x+4\right)+C}
+\end{align}
+\section{Conclusion}
+After seeing the integral after each level of polynomial division, I think that you'd agree polynomial division feels like \textbf{it isn't really changing the fundamental required methods to do the problem,} but rather just taking out chunks and pieces of the problem that might make it easier to solve. I think that it's interesting though, and something to keep in mind when attempting $u$-sub. Thanks for replying to my problem!\par
+Cheers,\par
+Andy Li
+\end{document}

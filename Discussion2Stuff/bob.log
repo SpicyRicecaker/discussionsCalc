@@ -1,0 +1,378 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=latex 2020.4.2)  2 APR 2020 16:15
+entering extended mode
+**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx\HCode\def\HCod
+e##1{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.{\g
+@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\doc
+umentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname te
+x4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{\HC
+ode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input  bob.tex
+ (bob.tex
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls"
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk12.clo"
+File: bk12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\tex4ht.st
+y"
+version 2019-03-18-15:24
+Package: tex4ht 
+--------------------------------------
+--- Note --- for _ at preamble, use the command line option `early_'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ at preamble, use the command line option `early^'
+--------------------------------------
+\tmp:toks=\toks15
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\usepackag
+e.4ht"
+version 2019-12-19-14:27
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/latex/blindtext\blindtex
+t.sty"
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\xspace.sty"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count176
+\c@Blindtext=\count177
+\c@blind@countparstart=\count178
+\blind@countxx=\count179
+\blindtext@numBlindtext=\count180
+\blind@countyy=\count181
+\c@blindlist=\count182
+\c@blindlistlevel=\count183
+\c@blindlist@level=\count184
+\blind@listitem=\count185
+\c@blind@listcount=\count186
+\c@blind@levelcount=\count187
+\blind@mathformula=\count188
+\blind@Mathformula=\count189
+\c@blind@randomcount=\count190
+\c@blind@randommax=\count191
+\c@blind@pangramcount=\count192
+\c@blind@pangrammax=\count193
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\tex4ht.4h
+t"
+version 2018-12-30-09:29
+--------------------------------------
+--- Note --- for additional information, use the command line option `info'
+--------------------------------------
+
+::::::::::::::::::::::::::::::::::::::::::
+ TeX4ht info is available in the log file 
+::::::::::::::::::::::::::::::::::::::::::
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\tex4ht.st
+y"
+version 2019-03-18-15:24
+
+--- needs --- tex4ht bob ---
+\tmp:cnt=\count194
+\openout15 = `bob.tmp'.
+
+(bob.tmp)
+\tmp:dim=\skip49
+--------------------------------------
+--- Note --- for XML code, use the command line option `xml' or `xhtml'
+--------------------------------------
+ (bob.xref)
+\:refout=\write3
+\openout3 = `bob.xref'.
+
+
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4.4ht
+"
+version 2020-01-24-14:39
+--------------------------------------
+--- Note --- to remove the <?xml version=...?> processing instruction use the c
+ommand line option `no-VERSION'
+--------------------------------------
+--------------------------------------
+--- Note --- to remove the DOCTYPE declaration use the command line option `no-
+DOCTYPE'
+--------------------------------------
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4-mat
+h.4ht"
+version 2019-12-16-15:21
+)
+--------------------------------------
+--- Note --- for marking of the base font, use the command line option `fonts+'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for non active _, use the command line option `no_'
+--------------------------------------
+--------------------------------------
+--- Note --- for _ of catcode 13, use the command line option `_13'
+--------------------------------------
+--------------------------------------
+--- Note --- for non active ^, use the command line option `no^'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ of catcode 13, use the command line option `^13'
+--------------------------------------
+
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4.4ht
+"
+version 2020-01-24-14:39
+--------------------------------------
+--- Note --- for alternative charset, use the command line option `charset=...'
+
+--------------------------------------
+--------------------------------------
+--- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
+on
+--------------------------------------
+--------------------------------------
+--- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for gif bitmaps of pictures, use the `gif' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for content and toc in 2 frames, use the command line option `fram
+es'
+--------------------------------------
+--------------------------------------
+--- Note --- for content, toc, and footnotes in 3 frames, use the command line 
+option `frames-fn'
+--------------------------------------
+--------------------------------------
+--- Note --- for file extension name xht, use the command line option `xht'
+--------------------------------------
+TeX4ht package options: html
+--------------------------------------
+--- Note --- To print a timestamp, use the command line option timestamp
+--------------------------------------
+--------------------------------------
+--- Note --- to ignore CSS code, use the command line option `-css
+--------------------------------------
+--------------------------------------
+--- Note --- for inline CSS code, use the command line option `css-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for pop ups on mouse over, use the command line option `mouseover'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for addressing images in a subdirectory, use the command line opti
+on `imgdir:.../'
+--------------------------------------
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4-mat
+h.4ht"
+version 2019-12-16-15:21
+)
+\:tokwrite=\toks16
+\:tokpage=\toks17
+--------------------------------------
+--- Note --- for back links to toc, use the command line option `sections+'
+--------------------------------------
+--------------------------------------
+--- Note --- for linear crosslinks of pages, use the command line option `next'
+
+--------------------------------------
+\openout15 = `bob.4ct'.
+
+\:tocout=\write4
+\openout4 = `bob.4tc'.
+
+
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4.4ht
+"
+version 2020-01-24-14:39
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4-mat
+h.4ht"
+version 2019-12-16-15:21
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\latex.4ht
+"
+version 2019-08-26-14:22
+LaTeX Info: Redefining \_ on input line 168.
+--------------------------------------
+--- Note --- for links into captions, instead of float heads, use the command l
+ine option `refcaption'
+--------------------------------------
+
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4.4ht
+"
+version 2020-01-24-14:39
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4-mat
+h.4ht"
+version 2019-12-16-15:21
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4.4ht
+"
+version 2020-01-24-14:39
+--------------------------------------
+--- Note --- For mini tocs immediately aftter the header use the command line o
+ption `minitoc<'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements with valued data, use the command lin
+e option `enumerate+'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements li's with value attributes, use the c
+ommand line option `enumerate-'
+--------------------------------------
+--------------------------------------
+--- Note --- for CSS2 code, use the command line option `css2'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial tabular, use the command line option `pic-tabular'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for inline footnotes use command line option `fn-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for tracing of latex font commands, use the command line option `f
+onts'
+--------------------------------------
+--------------------------------------
+--- Note --- for width specifications of tabular p entries, use the `p-width' c
+ommand line option or a configuration similar to \Configure{HColWidth}{\HCode{ 
+style="width:\HColWidth"}}
+--------------------------------------
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4-mat
+h.4ht"
+version 2019-12-16-15:21
+--------------------------------------
+--- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ environments, use the command line option `pic
+-m' (not recommended!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ and $$...$$ environments with latex alt, use t
+he command line option `pic-m+' (not safe!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+))
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\fontmath.
+4ht"
+version 2018-11-06-15:55
+
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4.4ht
+"
+version 2020-01-24-14:39
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4-mat
+h.4ht"
+version 2019-12-16-15:21
+))
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\book.4ht"
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4.4ht
+"
+version 2020-01-24-14:39
+--------------------------------------
+--- Note --- for automatic sectioning pagination, use the command line option `
+1', `2', `3', '4', '5', '6', or '7'
+--------------------------------------
+--------------------------------------
+--- Note --- for files named derived from section titles, use the command line 
+option `sec-filename'
+--------------------------------------
+--------------------------------------
+--- Note --- for i-columns index, use the command line option `index=i' (e.g., 
+index=2)
+--------------------------------------
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4-mat
+h.4ht"
+version 2019-12-16-15:21
+))
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4.4ht
+"
+version 2020-01-24-14:39
+)
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/generic/tex4ht\html4-mat
+h.4ht"
+version 2019-12-16-15:21
+))
+("C:\Users\aweso\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
+d-dvips.def"
+File: l3backend-dvips.def 2020-03-12 L3 backend support: dvips
+\l__pdf_internal_box=\box45
+\g__pdf_backend_object_int=\count195
+\l__pdf_backend_content_box=\box46
+\l__pdf_backend_model_box=\box47
+\g__pdf_backend_annotation_int=\count196
+\g__pdf_backend_link_int=\count197
+\g__pdf_backend_link_sf_int=\count198
+) (bob.aux)
+\openout1 = `bob.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+--- file bob.css ---
+ [1
+
+] [2
+
+] [3]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 9.
+ [1] [2] (bob.aux) ) 
+Here is how much of TeX's memory you used:
+ 3925 strings out of 480932
+ 46379 string characters out of 2899822
+ 381467 words of memory out of 3000000
+ 19807 multiletter control sequences out of 15000+200000
+ 533848 words of font info for 29 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 26i,6n,26p,770b,523s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on bob.dvi (5 pages, 13720 bytes).
